@@ -15,9 +15,9 @@ async function criarAssinatura(req, res) {
 
         // Criando nova assinatura
         const novaAssinatura = new Assinatura({
-            nomedoFilmeId,
-            dataInicio,
-            dataFim
+            nomedoFilme,
+            DataAquisicao,
+            DataDevolucao
         });
 
         // Salvando a assinatura no banco de dados

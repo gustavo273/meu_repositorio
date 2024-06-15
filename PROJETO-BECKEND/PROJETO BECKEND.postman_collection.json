@@ -1,0 +1,654 @@
+{
+	"info": {
+		"_postman_id": "0eaa3e4a-615a-44e0-8373-ff0f101eaf5a",
+		"name": "PROJETO BECKEND",
+		"description": "Sistema de Assinatura de filmes",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33276807"
+	},
+	"item": [
+		{
+			"name": "CLIENTE",
+			"item": [
+				{
+					"name": "buscar todos os clientes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/clientes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"clientes"
+							]
+						},
+						"description": "Rota para buscar todos os clientes"
+					},
+					"response": []
+				},
+				{
+					"name": "CRIAR",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\":\"gustavo\",\r\n    \"email\":\"gustavo@gmail.com\",\r\n    \"telefone\":\"995816767\",\r\n    \"senha\":\"000000\",\r\n    \"cpf\":\"0000000\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/clientes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"clientes"
+							]
+						},
+						"description": "Rota para criar cliente"
+					},
+					"response": []
+				},
+				{
+					"name": "DELETAR CLIENTE",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/clientes/666cc8614b26752a807a9fb6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"clientes",
+								"666cc8614b26752a807a9fb6"
+							]
+						},
+						"description": "Rota para para deletar Cliente"
+					},
+					"response": []
+				},
+				{
+					"name": "ATUALIZAR CLIENTE",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\":\"gustavo\",\r\n    \"email\":\"gustavo@gmai.com\",\r\n    \"telefone\":\"995816767\",\r\n    \"senha\":\"000000\",\r\n    \"cpf\":\"0000000\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/clientes/666cc8614b26752a807a9fb6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"clientes",
+								"666cc8614b26752a807a9fb6"
+							]
+						},
+						"description": "Rota para Atualizar Cliente"
+					},
+					"response": []
+				},
+				{
+					"name": "buscar cliente por id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/clientes/666cc8614b26752a807a9fb6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"clientes",
+								"666cc8614b26752a807a9fb6"
+							]
+						},
+						"description": "Rota para buscar cliente por id"
+					},
+					"response": []
+				}
+			],
+			"description": "cadastrar, editar, buscar, deletar clientes"
+		},
+		{
+			"name": "FILME",
+			"item": [
+				{
+					"name": "buscar todos os filmes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"description": "Rota para buscar todos os Filmes"
+					},
+					"response": []
+				},
+				{
+					"name": "atualizar filme",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"titulo\":\"bad boys\",\r\n    \"descricao\":\"filme policial\",\r\n    \"categoria\":\"18 anos\",\r\n    \"duracao\":\"85 minutos\",\r\n    \"preco\": \"14\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/filmes/666cef996eba43da97bcee86",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"filmes",
+								"666cef996eba43da97bcee86"
+							]
+						},
+						"description": "Rota para Atualizar Filme"
+					},
+					"response": []
+				},
+				{
+					"name": "deletar filme",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/filmes/666cef996eba43da97bcee86",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"filmes",
+								"666cef996eba43da97bcee86"
+							]
+						},
+						"description": "Rota para Deletar Filme"
+					},
+					"response": []
+				},
+				{
+					"name": "criar filme",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"titulo\":\"bad boys\",\r\n    \"descricao\":\"filme policial\",\r\n    \"categoria\":\"17 anos\",\r\n    \"duracao\":\"85 minutos\",\r\n    \"preco\": \"14\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/filmes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"filmes"
+							]
+						},
+						"description": "Rota para Criar Filme"
+					},
+					"response": []
+				},
+				{
+					"name": "buscando filme por id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/filmes/666cef996eba43da97bcee86",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"filmes",
+								"666cef996eba43da97bcee86"
+							]
+						},
+						"description": "Rota para buscar filme por id"
+					},
+					"response": []
+				}
+			],
+			"description": "Buscar, criar, editar e deletar Filmes"
+		},
+		{
+			"name": "GENERO",
+			"item": [
+				{
+					"name": "buscar genero por id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/genero/666cced108cf6e4f6055aa6b",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"genero",
+								"666cced108cf6e4f6055aa6b"
+							]
+						},
+						"description": "Rota para Buscar generos por id"
+					},
+					"response": []
+				},
+				{
+					"name": "criar genero",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\":\"comedia\",\r\n    \"descricao\":\"filmes de comedia\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/genero",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"genero"
+							]
+						},
+						"description": "Rota para criar Genero"
+					},
+					"response": []
+				},
+				{
+					"name": "atualizar genero",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\":\"comedi\",\r\n    \"descricao\":\"filmes de comedia\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/genero/666cf0206eba43da97bcee8a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"genero",
+								"666cf0206eba43da97bcee8a"
+							]
+						},
+						"description": "Rota para atualizar genero"
+					},
+					"response": []
+				},
+				{
+					"name": "buscar todos os generos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/genero",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"genero"
+							]
+						},
+						"description": "Rota para buscar todos os generos"
+					},
+					"response": []
+				},
+				{
+					"name": "deletando genero",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/genero/666cced108cf6e4f6055aa6b",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"genero",
+								"666cced108cf6e4f6055aa6b"
+							]
+						},
+						"description": "Rota para Deletar genero"
+					},
+					"response": []
+				}
+			],
+			"description": "Buscar, Criar, Editar e deletar Genero"
+		},
+		{
+			"name": "ASSINATURA",
+			"item": [
+				{
+					"name": "buscar todas as assinaturas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/assinatura",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"assinatura"
+							]
+						},
+						"description": "Rota para Buscar todas as Assinaturas"
+					},
+					"response": []
+				},
+				{
+					"name": "criar assinatura",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nomedoFilme\":\"badboys\",\r\n    \"DataAquisicao\":\"2024-06-14\",\r\n    \"DataDevolucao\":\"2024-06-19\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/assinatura",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"assinatura"
+							]
+						},
+						"description": "Rota para criar assinatura"
+					},
+					"response": []
+				},
+				{
+					"name": "atualizar assinatura",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nomedoFilme\":\"badboys\",\r\n    \"DataAquisicao\":\"2024-06-14\",\r\n    \"DataDevolucao\":\"2024-06-19\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/assinatura/666cc8614b26752a807a9fb6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"assinatura",
+								"666cc8614b26752a807a9fb6"
+							]
+						},
+						"description": "Rota para atualizar assinatura"
+					},
+					"response": []
+				},
+				{
+					"name": "deletando assiantura",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/assinatura/666cc8614b26752a807a9fb6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"assinatura",
+								"666cc8614b26752a807a9fb6"
+							]
+						},
+						"description": "Rota para deletar assinatura"
+					},
+					"response": []
+				},
+				{
+					"name": "buscando assinatura por id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/assinatura/666cc8614b26752a807a9fb6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"assinatura",
+								"666cc8614b26752a807a9fb6"
+							]
+						},
+						"description": "Rota para buscar assinatura por id"
+					},
+					"response": []
+				}
+			],
+			"description": "buscar, criar, editar, deletar assiantura"
+		},
+		{
+			"name": "FORMA DE PAGAMENTO",
+			"item": [
+				{
+					"name": "buscando todas as formas de pagamento",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"description": "Rota para buscar todas as formas de pagamento"
+					},
+					"response": []
+				},
+				{
+					"name": "criar forma de pagamento",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\":\"pix\",\r\n    \"descricao\":\"qr code\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/formapagamento",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"formapagamento"
+							]
+						},
+						"description": "Rota para criar forma de pagamento"
+					},
+					"response": []
+				},
+				{
+					"name": "atualizando forma de pagamento",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\":\"pix\",\r\n    \"descricao\":\"chave\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/formapagamento/666cf2a968185c92727f418a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"formapagamento",
+								"666cf2a968185c92727f418a"
+							]
+						},
+						"description": "Rota para atualizar forma de pagamento"
+					},
+					"response": []
+				},
+				{
+					"name": "deletar forma de pagamento",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/formapagamento/666cf2a968185c92727f418a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"formapagamento",
+								"666cf2a968185c92727f418a"
+							]
+						},
+						"description": "Rota para deletar Forma de pagamento"
+					},
+					"response": []
+				},
+				{
+					"name": "buscando forma de pagamento por id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/formapagamento/666cf2a968185c92727f418a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"formapagamento",
+								"666cf2a968185c92727f418a"
+							]
+						},
+						"description": "Rota para buscar forma de pagamento por id"
+					},
+					"response": []
+				}
+			],
+			"description": "Buscar, criar, atualizar, deletar forma de pagamento"
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "id",
+			"value": "1"
+		},
+		{
+			"key": "base_url",
+			"value": "https://postman-rest-api-learner.glitch.me/"
+		}
+	]
+}
