@@ -7,6 +7,7 @@ async function create(req, res) {
        
 }
 
+
 async function getAll(req, res) {
     res.json(await Cargo.find())
 }
