@@ -619,6 +619,72 @@
 				}
 			],
 			"description": "Buscar, criar, atualizar, deletar forma de pagamento"
+		},
+		{
+			"name": "Autenticacao",
+			"item": [
+				{
+					"name": "Registrar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\":\"gustavo\",\r\n    \"email\":\"gustavo@gmai.com\",\r\n    \"senha\":\"0000000\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/auth/registrar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"registrar"
+							]
+						},
+						"description": "Rota para registrar usuario"
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\":\"nome\",\r\n    \"email\":\"gustavo@gmai.com\",\r\n    \"senha\":\"0000000\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"login"
+							]
+						},
+						"description": "Rota para Logar"
+					},
+					"response": []
+				}
+			],
+			"description": "Autenticar Usuario"
 		}
 	],
 	"event": [
