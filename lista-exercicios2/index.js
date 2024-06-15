@@ -7,6 +7,7 @@ const port = 3000
 app.use(express.json())
 
 
+
 /* 1. Faça uma api para calcular o estoque médio de uma peça, sendo que ESTOQUE MÉDIO = (QUANTIDADE MÍNIMA + QUANTIDADE MÁXIMA) /2. */
 app.post('/exercicio1', (req, res) => {
     const corpo = req.body
