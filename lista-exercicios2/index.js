@@ -4,7 +4,7 @@ const app = express()
 const port = 3000
 
 //Configurar o midleware para trasformar todo corpo em JSON
-app.use(express.json()) 
+app.use(express.json())  
 
 
 
